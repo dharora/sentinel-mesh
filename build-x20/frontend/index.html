@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sentinel Mesh — Governed Incident Response</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="noise"></div>
+    <main class="app-shell">
+      <aside class="sidebar">
+        <div class="brand"><div class="brand-mark">S</div><span>sentinel<span class="brand-fade">mesh</span></span></div>
+        <nav><a class="nav-link active" href="#"><span>⊞</span> Command center</a><a class="nav-link" href="#"><span>◫</span> Service health</a><a class="nav-link" href="#"><span>⌁</span> Runbook catalog</a><a class="nav-link" href="#"><span>◌</span> Audit trail</a></nav>
+        <div class="sidebar-bottom"><div class="safety-card"><div class="safety-dot"></div><div><strong>Safe AI enforced</strong><small>Policy engine online</small></div></div><div class="oncall"><div class="avatar">OC</div><div><strong>On-call engineer</strong><small>Incident commander</small></div><button aria-label="settings">···</button></div></div>
+      </aside>
+      <section class="workspace">
+        <header class="topbar"><div><div class="eyebrow">PRODUCTION · AP-SOUTH-1</div><h1>Incident command</h1></div><div class="top-actions"><span class="live-pill"><i></i> Live telemetry</span><button class="ghost-button" id="simulate-button">+ Simulate incident</button></div></header>
+        <section class="overview-grid">
+          <div class="metric"><span>Open incidents</span><strong id="open-count">01</strong><small><b class="red-dot"></b> 1 requires attention</small></div>
+          <div class="metric"><span>Mean time to triage</span><strong>1m 42s</strong><small class="positive">↓ 38% from baseline</small></div>
+          <div class="metric"><span>Unsafe actions blocked</span><strong id="blocked-count">00</strong><small class="muted">By Safe AI this week</small></div>
+          <div class="metric score"><span>Grounding score</span><strong>96<span>%</span></strong><div class="meter"><i></i></div><small>Source-cited reasoning</small></div>
+        </section>
+        <section class="content-grid">
+          <div class="incident-pane panel"><div class="panel-head"><div><span class="eyebrow">ACTIVE INCIDENTS</span><h2>Response queue</h2></div><span class="count-badge" id="incident-total">1</span></div><div id="incident-list" class="incident-list"></div><div class="simulations"><span>DEMO SCENARIOS</span><button data-scenario="memoryLeak">Memory leak</button><button data-scenario="badDeploy">Bad deploy</button><button data-scenario="unsafeAction">Safety gate</button></div></div>
+          <div class="command-pane">
+            <div id="empty-state" class="empty-state hidden"><div>◌</div><h2>No incident selected</h2><p>Select or create an incident to begin.</p></div>
+            <div id="command-content">
+              <section class="incident-header panel"><div class="incident-title"><div id="severity-badge" class="severity p1">P1</div><div><div class="crumb" id="service-name">checkout-api <span>/</span> commerce</div><h2 id="incident-title">Checkout latency spike</h2><p id="incident-summary"></p></div></div><div class="header-actions"><span id="incident-status" class="status waiting">AWAITING APPROVAL</span><button id="run-button" class="primary-button">Run governed analysis <span>→</span></button></div></section>
+              <section class="agent-flow panel"><div class="flow-title"><div><span class="eyebrow">LYZR AUTOMATA · GOVERNED PIPELINE</span><h3>Specialist handoff</h3></div><span id="confidence" class="confidence">94% evidence confidence</span></div><div class="flow-track"><div class="agent-step done"><div class="agent-icon triage">⌁</div><div><strong>Triage</strong><small>Cluster & severity</small></div><b>✓</b></div><div class="flow-line"></div><div class="agent-step done"><div class="agent-icon diagnostic">⌕</div><div><strong>Diagnostic</strong><small>Evidence & hypotheses</small></div><b>✓</b></div><div class="flow-line"></div><div class="agent-step active"><div class="agent-icon remediation">⎇</div><div><strong>Remediation</strong><small>Safe runbook</small></div><b>3</b></div></div></section>
+              <section class="analysis-grid">
+                <div class="diagnosis panel"><div class="panel-head tight"><div><span class="eyebrow">ROOT CAUSE ASSESSMENT</span><h3>Evidence-grounded diagnosis</h3></div><div class="verified">✓ Verified</div></div><p id="root-cause" class="root-cause"></p><div id="evidence-list" class="evidence-list"></div><div class="hypothesis"><span>Alternative hypotheses considered</span><p>Transient dependency degradation · Traffic surge without regression</p></div></div>
+                <div class="runbook panel"><div class="panel-head tight"><div><span class="eyebrow">SAFE REMEDIATION GATE</span><h3>Proposed runbook</h3></div><span class="policy-label">◈ POLICY CHECKED</span></div><div id="action-list" class="action-list"></div></div>
+              </section>
+              <section class="timeline panel"><div class="panel-head tight"><div><span class="eyebrow">AIMS DECISION GRAPH</span><h3>Traceable reasoning trail</h3></div><button id="download-rca" class="text-button">Download RCA ↗</button></div><div id="timeline-list" class="timeline-list"></div></section>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+    <div class="toast" id="toast"></div><script type="module" src="/app.js"></script>
+  </body>
+</html>

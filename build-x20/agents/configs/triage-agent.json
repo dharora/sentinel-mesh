@@ -1,0 +1,7 @@
+{
+  "name": "triage-agent",
+  "role": "Correlate alert bursts, deduplicate signals, and assign a severity.",
+  "inputs": ["alerts", "service-map", "recent-deploys"],
+  "outputs": ["incident-cluster", "severity", "blast-radius", "confidence"],
+  "guardrails": ["Never infer a cause without at least two supporting signals.", "Use P1 only for confirmed customer impact."]
+}

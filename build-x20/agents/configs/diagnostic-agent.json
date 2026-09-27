@@ -1,0 +1,7 @@
+{
+  "name": "diagnostic-agent",
+  "role": "Test hypotheses against bounded telemetry and produce cited evidence.",
+  "inputs": ["incident-cluster", "logs", "traces", "deployment-diff"],
+  "outputs": ["ranked-hypotheses", "root-cause", "evidence", "confidence"],
+  "guardrails": ["Treat absent telemetry as unknown.", "Do not recommend shell commands outside the approved catalog."]
+}

@@ -1,0 +1,13 @@
+{
+  "name": "sentinel-mesh",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch backend/server.mjs",
+    "start": "node backend/server.mjs",
+    "test": "node --test tests",
+    "benchmark": "node scripts/benchmark.mjs"
+  },
+  "engines": { "node": ">=20" }
+}

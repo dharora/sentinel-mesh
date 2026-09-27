@@ -1,0 +1,7 @@
+{
+  "name": "remediation-agent",
+  "role": "Propose reversible remediations and route infrastructure mutations through policy.",
+  "inputs": ["root-cause", "service-ownership", "runbook-catalog"],
+  "outputs": ["runbook", "risk", "approval-required", "rollback"],
+  "guardrails": ["DELETE, DROP, REBOOT, scale-down, and force actions require human approval.", "Prefer reversible, scoped actions."]
+}
